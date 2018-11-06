@@ -174,11 +174,11 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.3.6.Final</version>
-		</dependency>
+		</dependency> -->
 
 	</dependencies>
 	<build>
