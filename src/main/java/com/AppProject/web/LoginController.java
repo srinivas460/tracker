@@ -201,11 +201,13 @@ public class LoginController {
 	public Object loadDummy() {
 		ResponseObject object = new ResponseObject();
 		
+		Date createdAt=new Date();
 		Client client = new Client();
 		client.setMobile("9676462920");
 		client.setName("AmendSquare Pvt Ltd.");
 		client.setDescirption("AmendSquare Pvt Ltd.");
 		client.setActive(1);
+		client.setCreatedAt(createdAt);
 
         Set<User> userClients = new HashSet<User>();
         Set<Client> ClientUser = new HashSet<Client>();
@@ -220,6 +222,7 @@ public class LoginController {
 		role.setCanComment(1);
 		role.setCancreateTicket(1);
 		role.setCanCreateuser(1);
+		role.setCreatedAt(createdAt);
 
 		roleRepository.save(role);
 
@@ -229,7 +232,7 @@ public class LoginController {
 		user.setName("Varma");
 		user.setUsername("9676462929");
 		user.setMacid(user.getMobile());
-		user.setCreatedAt(new Date());
+		user.setCreatedAt(createdAt);
 		user.setPassword(user.PASSWORD_ENCODER.encode("dummy"));
 		user.setRoles(roleRepository.getRoles("ADMIN"));
 		

@@ -1,0 +1,183 @@
+{
+	"id": "9a1c69a8-7cd8-d404-2f2a-aff30d855884",
+	"name": "Tracker",
+	"description": "",
+	"order": [
+		"49c4d3e0-2799-d3e0-defb-ae938b524f5e",
+		"e5af0026-0357-a1f4-5828-9fcfb0ecf9e6",
+		"6654ab88-abf1-a4f6-e69d-3f362f454fca",
+		"dbd27964-0fdf-6382-833a-7ce0eab4856d",
+		"4f58e409-1537-fd05-8824-91c50be01d12"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1541069363359,
+	"owner": "5018951",
+	"public": false,
+	"requests": [
+		{
+			"id": "49c4d3e0-2799-d3e0-defb-ae938b524f5e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8087/app/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541167312049,
+			"name": "Login",
+			"description": "",
+			"collectionId": "9a1c69a8-7cd8-d404-2f2a-aff30d855884",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"9676462930\",\n    \"password\": \"kIaogk\",\n    \"fcm\": \"Fetched Successfully Roles Info\",\n    \"macid\": \"9676462930\"\n}"
+		},
+		{
+			"id": "4f58e409-1537-fd05-8824-91c50be01d12",
+			"headers": "Content-Type: application/json\nAuthorization: Basic OTY3NjQ2MjkyOTpkdW1teTI=\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic OTY3NjQ2MjkyOTpkdW1teTI=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8087/admin/addnewuser",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541242075348,
+			"name": "AdminCreation",
+			"description": "",
+			"collectionId": "9a1c69a8-7cd8-d404-2f2a-aff30d855884",
+			"responses": [],
+			"rawModeData": "{\n    \"mobile\": \"+919676462931\",\n    \"name\": \"Deve user 2\",\n    \"email\": \"user@gmail.commmm\"\n}"
+		},
+		{
+			"id": "6654ab88-abf1-a4f6-e69d-3f362f454fca",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8087/app/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "9a1c69a8-7cd8-d404-2f2a-aff30d855884",
+			"data": [],
+			"dataMode": "raw",
+			"name": "passwordchange",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1541140997048,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"username\": \"9676462930\",\n    \"password\": \"dummy\",\n    \"fcm\": \"Fetched Successfully Roles Info\",\n    \"macid\": \"9676462930\"\n}"
+		},
+		{
+			"id": "dbd27964-0fdf-6382-833a-7ce0eab4856d",
+			"headers": "Content-Type: application/json\nAuthorization: Basic OTY3NjQ2MjkyOTpkdW1teTE=\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic OTY3NjQ2MjkyOTpkdW1teTE=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8087/app/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "9a1c69a8-7cd8-d404-2f2a-aff30d855884",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Forgot",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1541155953114,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"username\": \"9676462929\",\n    \"password\": \"dummy2\",\n    \"fcm\": \"Fetched Successfully Roles Info\",\n    \"macid\": \"9676462929\"\n}"
+		},
+		{
+			"id": "e5af0026-0357-a1f4-5828-9fcfb0ecf9e6",
+			"headers": "Authorization: Basic OTY3NjQ2MjkyOTpkdW1teQ==\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic OTY3NjQ2MjkyOTpkdW1teQ==",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8087/admin/dummy",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "9a1c69a8-7cd8-d404-2f2a-aff30d855884",
+			"data": null,
+			"dataMode": "params",
+			"name": "dummyData",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1541073269984,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

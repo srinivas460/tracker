@@ -11,6 +11,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import com.AppProject.entities.Role;
@@ -19,11 +20,12 @@ import com.AppProject.repositories.RolesRepository;
 import com.AppProject.repositories.UserRepository;
 @SpringBootApplication
 @EnableAutoConfiguration
+@EnableJpaRepositories(basePackages= {"com.AppProject.repositories"})
 //@EnableJpaAuditing
 //@PropertySource(value = { "classpath:application.properties" })
 //@EntityScan( basePackages = {"com.AppProject.entities"} )
 ////@EnableAutoConfiguration
-@ComponentScan(basePackages = "com.AppProject.*")
+@ComponentScan("com.AppProject")
 public class AppProjectApplication extends SpringBootServletInitializer{
 	@Autowired
 	private Environment env;
