@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
@@ -18,6 +19,7 @@ import com.AppProject.entities.Role;
 import com.AppProject.entities.User;
 import com.AppProject.repositories.RolesRepository;
 import com.AppProject.repositories.UserRepository;
+import com.AppProject.security.FileStorageProperties;
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableJpaRepositories(basePackages= {"com.AppProject.repositories"})
@@ -25,6 +27,9 @@ import com.AppProject.repositories.UserRepository;
 //@PropertySource(value = { "classpath:application.properties" })
 //@EntityScan( basePackages = {"com.AppProject.entities"} )
 ////@EnableAutoConfiguration
+@EnableConfigurationProperties({
+    FileStorageProperties.class
+})
 @ComponentScan("com.AppProject")
 public class AppProjectApplication extends SpringBootServletInitializer{
 	@Autowired

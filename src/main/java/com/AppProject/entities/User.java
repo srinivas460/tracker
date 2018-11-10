@@ -44,8 +44,8 @@ public class User extends AbstractAuditingEntity implements Serializable {
 	private String mobile;
 	private String macid;
 	private int status=0;//1 : need to change password,0-nothing
-
-	private Client userClient;
+	private Long client_id;
+//	private Client userClient;
 	@Transient
 	private List<String> rolesList;
 	
@@ -63,6 +63,16 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+	
+
+	public Long getClient_id() {
+		return client_id;
+	}
+
+	public void setClient_id(Long client_id) {
+		this.client_id = client_id;
 	}
 
 	public String getUsername() {
@@ -128,7 +138,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 //	public void setClients(Set<Client> clients) {
 //		this.clients = clients;
 //	}
-	@ManyToOne
+/*	@ManyToOne
 	@JoinColumn(name = "client_id")
 	public Client getUserClient() {
 		return userClient;
@@ -136,7 +146,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
 	public void setUserClient(Client userClient) {
 		this.userClient = userClient;
-	}
+	}*/
 	
 
 	@Override

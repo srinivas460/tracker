@@ -1,7 +1,6 @@
 package com.AppProject.web;
 
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -208,7 +207,7 @@ public class LoginController {
 		client.setDescirption("AmendSquare Pvt Ltd.");
 		client.setActive(1);
 		client.setCreatedAt(createdAt);
-
+		client=clientRepository.save(client);
         Set<User> userClients = new HashSet<User>();
         Set<Client> ClientUser = new HashSet<Client>();
 		
@@ -240,12 +239,8 @@ public class LoginController {
 		roleuser.add(user);
 		role.setUsers(roleuser);
 
+		user.setClient_id(client.getId());
 		user= userRepository.save(user);
-		 ClientUser.add(client);
-	        user.setUserClient(client);
-	        userClients.add(user);
-	        client.setUsers(userClients);
-	        clientRepository.save(client);
 
 //		client=clientRepository.save(client);
 		userRepository.save(user);

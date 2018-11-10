@@ -1,10 +1,24 @@
 package com.AppProject.Utils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Utils {
+	
+	public static String getDate() {
+		String pattern = "ddMMyyyyHHmmss";
+		SimpleDateFormat simpleDateFormat =new SimpleDateFormat(pattern, new Locale("en", "IN"));
+		return simpleDateFormat.format(new Date());
+	}
+	public static String getDate(Date date) {
+		String pattern = "ddMMyyyyHHmmss";
+		SimpleDateFormat simpleDateFormat =new SimpleDateFormat(pattern, new Locale("en", "IN"));
+		return simpleDateFormat.format(date);
+	}
 
 	public static char[] generatePassword(int len) 
     { 

@@ -24,7 +24,7 @@ public class Client  extends AbstractAuditingEntity implements Serializable{
 	private String descirption;
 	private String mobile;
 	private String email;
-	private Set<User> users;
+//	private Set<User> users;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -68,28 +68,28 @@ public class Client  extends AbstractAuditingEntity implements Serializable{
 		this.email = email;
 	}
 
-	@OneToMany(mappedBy="userClient", fetch=FetchType.EAGER)
-	public Set<User> getUsers() {
-		return this.users;
-	}
-
-	public void setUsers(Set<User> users) {
-		this.users = users;
-	}
+//	@OneToMany(mappedBy="userClient", fetch=FetchType.EAGER)
+//	public Set<User> getUsers() {
+//		return this.users;
+//	}
+//
+//	public void setUsers(Set<User> users) {
+//		this.users = users;
+//	}
 	
-	public User addUser(User user) {
-		getUsers().add(user);
-		user.setUserClient(this);
-
-		return user;
-	}
-
-	public User removeUser(User user) {
-		getUsers().remove(user);
-		user.setUserClient(null);
-		return user;
-	}
-	
+//	public User addUser(User user) {
+//		getUsers().add(user);
+//		user.setUserClient(this);
+//
+//		return user;
+//	}
+//
+//	public User removeUser(User user) {
+//		getUsers().remove(user);
+//		user.setUserClient(null);
+//		return user;
+//	}
+//	
 /*	@OneToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "map_user_clients",
 	joinColumns = {@JoinColumn(name = "client_id", referencedColumnName = "id")},

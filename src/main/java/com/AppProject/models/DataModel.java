@@ -2,11 +2,16 @@ package com.AppProject.models;
 
 import java.util.List;
 
+import com.AppProject.entities.Project;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+@JsonInclude(Include.NON_NULL)
 public class DataModel {
 
 	private List<String> roleslist;
 	private String token;
 	private List<RoleModel> roles;
+	private List<String> projects;
 	private Object details;
 	
 	
@@ -33,6 +38,12 @@ public class DataModel {
 	}
 	public void setRoles(List<RoleModel> roles) {
 		this.roles = roles;
+	}
+	public List<String> getProjects() {
+		return projects;
+	}
+	public void setProjects(List<String> projects) {
+		this.projects = projects;
 	}
 
 	
